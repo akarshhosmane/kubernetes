@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: hello-world-rc
+spec:
+  replicas: 3
+  selector:
+    app: express-hello-world
+  template:
+    metadata:
+      name: hello-world
+      labels:
+        app: express-hello-world
+    spec:
+      containers:
+      - name: hello-world
+        image: akarshhosmane/hellonode-app
+        ports:
+        - containerPort: 8080
+
