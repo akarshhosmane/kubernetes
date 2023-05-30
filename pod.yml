@@ -10,3 +10,4 @@ spec:
     image: akarshhosmane/hellonode-app:latest
     ports:
     - containerPort: 8080
+    
